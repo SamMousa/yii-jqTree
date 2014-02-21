@@ -42,7 +42,7 @@ class JQTree extends CTreeView
 		else if($this->cssFile!==false)
 			$cs->registerCssFile($this->cssFile);
 
-		echo CHtml::tag('ul',$this->htmlOptions,false,false)."\n";
+		echo CHtml::tag('div',$this->htmlOptions,false,false)."\n";
 	}
 
 		/**
@@ -60,5 +60,10 @@ class JQTree extends CTreeView
 				$options[$name]=$this->$name;
 		}
 		return $options;
+	}
+
+	public function run()
+	{
+		echo "</div>";
 	}
 }
